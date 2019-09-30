@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <title>All tags</title>
+    </head>
+    <body>
+        <h1>All tags</h1>
+        <hr />
+        <ul>
+            {% for tag in tags %}
+                <li><a href="{% url 'ShowPagesForTag' tag.name %}">#{{ tag.name }}</a></li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>

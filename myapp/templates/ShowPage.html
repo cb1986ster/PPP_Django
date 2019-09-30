@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <title>{{ page.title }}</title>
+    </head>
+    <body>
+        <h1>{{ page.title }}</h1>
+        <hr />
+        {{ page.content }}
+        <hr />
+        {% for tag in page.tag_set.all %}
+            <a href="{% url 'ShowPagesForTag' tag.name %}">#{{ tag.name }}</a>
+        {% endfor %}
+    </body>
+</html>
